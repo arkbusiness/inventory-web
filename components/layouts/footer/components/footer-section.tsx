@@ -17,6 +17,8 @@ export const FooterSection = ({ section }: FooterSectionProps) => {
             <Link
               href={link.href}
               className="font-medium text-white/77 hover:opacity-75 transition-opacity"
+              target={link.target}
+              rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
             >
               {link.label}
             </Link>

@@ -6,4 +6,8 @@ export const APP_ROUTES = {
   about: () => "/about",
   contact: () => "/contact",
   resources: () => "/resources",
+  faq: () => "/faq",
+  blog: () => "/blog",
+  privacy: () => "/privacy",
+  terms: () => "/terms",
 };

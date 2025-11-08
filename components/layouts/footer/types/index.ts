@@ -1,6 +1,7 @@
 export interface FooterLink {
   label: string;
   href: string;
+  target?: string;
 }
 
 export interface FooterSection {

@@ -10,6 +10,8 @@ export const FooterSocial = () => {
           href={social.href}
           className="hover:opacity-75 transition-opacity"
           aria-label={social.label}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {social.icon}
         </Link>

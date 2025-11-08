@@ -44,7 +44,7 @@ const features = [
 
 export const WhyARK = () => {
   return (
-    <section className="w-full pt-16 pb-[6.13rem] px-16 bg-highlight">
+    <section className="w-full pt-16 pb-[6.13rem] px-2 sm:px-6 md:px-16 bg-highlight">
       <Container>
         <>
           <div className="text-center">

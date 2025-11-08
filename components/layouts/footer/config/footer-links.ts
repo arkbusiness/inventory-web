@@ -4,19 +4,16 @@ export const footerSections: FooterSection[] = [
   {
     title: "FEATURES",
     links: [
-      { label: "Inventory", href: "#inventory" },
-      { label: "Inventory Management", href: "#inventory-management" },
-      { label: "Procurement", href: "#procurement" },
-      { label: "Custom Real-world Data", href: "#custom-data" },
+      { label: "Inventory Management Application", href: "#" },
+      { label: "Gopher (B2B event hub)", href: "#" }
     ],
   },
   {
     title: "COMPANY",
     links: [
-      { label: "Careers", href: "#careers" },
-      { label: "About us", href: "#about" },
-      { label: "Resources", href: "#resources" },
-      { label: "Newsroom", href: "#newsroom" },
+      { label: "Solutions", href: "#" },
+      { label: "About us", href: "#" },
+      { label: "Testimonials", href: "#" }
     ],
   },
   {
@@ -24,6 +21,7 @@ export const footerSections: FooterSection[] = [
     links: [
       { label: "FAQs", href: "#faqs" },
       { label: "Contact Us", href: "#contact" },
+      { label: "Blog", href: "#blog" }
     ],
   },
   {

@@ -1,16 +1,21 @@
-import React from "react";
+import { Container } from "@/components/layouts/container";
+import { footerSections } from "../config/footer-links";
 import { FooterBrand } from "./footer-brand";
 import { FooterSection } from "./footer-section";
 import { FooterSocial } from "./footer-social";
-import { footerSections } from "../config/footer-links";
+
+const currentYear = new Date().getFullYear()
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-secondary text-white py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+    <footer className="w-full bg-secondary text-white pt-20 pb-16">
+      <Container>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(12.13rem,1fr))] md:grid-cols-[23.19rem_repeat(auto-fit,minmax(12.13rem,1fr))] gap-10 mb-20 justify-center">
           {/* Brand Section */}
-          <FooterBrand />
+          <div className="flex flex-col gap-14">
+            <FooterBrand />
+            <FooterSocial />
+          </div>
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
@@ -19,16 +24,14 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Social Links */}
-          <FooterSocial />
-
-          {/* Copyright */}
-          <p className="text-sm text-white/60">
-            © 2025 Copyright ARK. Limited. All rights reserved.
+        <div className="border-t border-white" />
+         <div className="flex justify-end">
+            {/* Copyright */}
+            <p className="text-xs text-white font-normal mt-20">
+            © {currentYear} Copyright ARK. Limited. All rights reserved.
           </p>
-        </div>
-      </div>
+         </div>
+      </Container>
     </footer>
   );
 };

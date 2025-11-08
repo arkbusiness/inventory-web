@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import { MainHeader } from "@/components/layouts/navigation";
+import { Footer } from "@/components/layouts/footer";
 
 export const metadata: Metadata = {
   title: ARK_META.title,
@@ -21,6 +22,7 @@ export default function RootLayout({
         <NextTopLoader color="var(--tertiary)" />
         <MainHeader />
         <main className="relative max-w-[1728px] mx-auto">{children}</main>
+        <Footer />
       </body>
     </html>
   );

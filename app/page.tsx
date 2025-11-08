@@ -1,10 +1,9 @@
 import { Container } from "@/components/layouts/container";
 import {
-  Hero,
-  DashboardPreview,
-  WhyARK,
-  FeatureIcons,
   CTASection,
+  DashboardPreview,
+  Hero,
+  WhyARK
 } from "@/features/landing";
 
 export default function Home() {
@@ -19,10 +18,7 @@ export default function Home() {
       <div className="mt-12">
         <WhyARK />
       </div>
-      {/*
-      <FeatureIcons />
       <CTASection />
-     */}
     </>
   );
 }

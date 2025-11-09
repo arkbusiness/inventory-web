@@ -135,26 +135,6 @@ This project uses:
 - `swiper` - Touch slider
 - `nextjs-toploader` - Page loading indicator
 
-## 🚢 Deployment
-
-### Vercel (Recommended)
-
-The easiest way to deploy is using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/arkbusiness/inventory-web)
-
-### Other Platforms
-
-This Next.js app can be deployed to any platform that supports Node.js:
-
-- Netlify
-- AWS Amplify
-- Railway
-- Render
-- Self-hosted with Docker
-
-See [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
 ## 📝 Contributing
 
 1. Follow the Bulletproof React pattern when adding new features

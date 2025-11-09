@@ -44,14 +44,14 @@ const features = [
 
 export const WhyARK = () => {
   return (
-    <section className="w-full pt-16 pb-[6.13rem] px-2 sm:px-6 md:px-16 bg-highlight">
+    <section className="w-full pt-16 pb-[6.13rem] px-2 sm:px-6 md:px-16 bg-highlight" aria-labelledby="features-heading">
       <Container>
         <>
           <div className="text-center">
             <p className="text-primary font-semibold  mb-3">
               Features
             </p>
-            <h2 className="text-[2.25rem] font-semibold text-black font-montserrat">
+            <h2 id="features-heading" className="text-[2.25rem] font-semibold text-black font-montserrat">
               Why ARK?
             </h2>
             <p className="text-xl max-w-6xl mx-auto font-normal mt-5">

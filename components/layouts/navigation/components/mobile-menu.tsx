@@ -20,11 +20,17 @@ export function MobileMenu({ items }: MobileMenuProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="lg:hidden text-black  w-8 h-8 active:scale-95 transition-all">
+        <button 
+          className="lg:hidden text-black  w-8 h-8 active:scale-95 transition-all"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="inherit"
+            aria-hidden="true"
+            role="img"
           >
             <path d="M3 4H21V6H3V4ZM3 11H15V13H3V11ZM3 18H21V20H3V18Z"></path>
           </svg>

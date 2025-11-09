@@ -8,7 +8,7 @@ interface NavLinksProps {
 
 export function NavLinks({ items, className = "" }: NavLinksProps) {
   return (
-    <nav className={`flex items-center gap-8 ${className}`}>
+    <nav className={`flex items-center gap-8 ${className}`} aria-label="Main navigation">
       {items.map((item) => (
         <Link
           key={item.href}

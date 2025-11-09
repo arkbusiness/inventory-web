@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`${INTER_CLASS} antialiased`}>
         <NextTopLoader color="var(--tertiary)" />
         <MainHeader />
-        <main className="relative max-w-[1728px] mx-auto">{children}</main>
+        <main id="main-content" className="relative max-w-[1728px] mx-auto" role="main">{children}</main>
         <Footer />
       </body>
     </html>

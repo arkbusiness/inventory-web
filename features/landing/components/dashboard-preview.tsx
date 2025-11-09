@@ -7,7 +7,11 @@ export const DashboardPreview = () => {
       height={609}
       viewBox="0 0 1010 609"
       className="w-full h-full max-w-[1010px] max-h-[609px] mx-auto"
-      fill="none">
+      fill="none"
+      role="img"
+      aria-label="ARK Inventory Management Dashboard Preview">
+      <title>Dashboard Preview</title>
+      <desc>A preview of the ARK inventory management dashboard interface showing various features and data visualization</desc>
       <g clipPath="url(#clip0_315_518)">
         <rect width={1010} height={609} rx={12} fill="#FAEFE8" />
         <g clipPath="url(#clip1_315_518)">

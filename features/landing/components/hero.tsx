@@ -2,9 +2,9 @@ import { LinkButton } from "@/components/ui/link-button";
 
 export const Hero = () => {
   return (
-    <section className="w-full mt-4">
+    <section className="w-full mt-4" aria-labelledby="hero-heading">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h1 className="text-[clamp(1.5rem,6vw,4rem)] text-secondary font-semibold font-montserrat leading-[110%]">
+        <h1 id="hero-heading" className="text-[clamp(1.5rem,6vw,4rem)] text-secondary font-semibold font-montserrat leading-[110%]">
           Smart Inventory Management Solutions for Growing Businesses
         </h1>
 

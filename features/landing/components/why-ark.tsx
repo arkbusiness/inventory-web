@@ -1,5 +1,12 @@
 import { Container } from "@/components/layouts/container";
-import { BarChart3, GitBranch, HandCoins, Kanban, TrendingUp, Zap } from "lucide-react";
+import {
+  BarChart3,
+  GitBranch,
+  HandCoins,
+  Kanban,
+  TrendingUp,
+  Zap,
+} from "lucide-react";
 import { FeatureCard } from "./feature-card";
 import { FeatureIcons } from "./feature-icons";
 
@@ -44,18 +51,23 @@ const features = [
 
 export const WhyARK = () => {
   return (
-    <section className="w-full pt-16 pb-[6.13rem] px-2 sm:px-6 md:px-16 bg-highlight" aria-labelledby="features-heading">
+    <section
+      className="w-full pt-16 pb-[6.13rem] px-2 sm:px-6 md:px-16 bg-highlight"
+      aria-labelledby="features-heading"
+    >
       <Container>
         <>
           <div className="text-center">
-            <p className="text-primary font-semibold  mb-3">
-              Features
-            </p>
-            <h2 id="features-heading" className="text-[2.25rem] font-semibold text-black font-montserrat">
+            <p className="text-primary font-semibold  mb-3">Features</p>
+            <h2
+              id="features-heading"
+              className="text-[2.25rem] font-semibold text-black font-montserrat"
+            >
               Why ARK?
             </h2>
             <p className="text-xl max-w-6xl mx-auto font-normal mt-5">
-              At ARK, we offer comprehensive inventory management and event-driven commerce solutions tailored to your unique needs
+              At ARK, we offer comprehensive inventory management and
+              event-driven commerce solutions tailored to your unique needs
             </p>
           </div>
 

@@ -1,10 +1,5 @@
 import { Container } from "@/components/layouts/container";
-import { WhyARK } from "@/components/ui";
-import {
-  CTASection,
-  DashboardPreview,
-  Hero,
-} from "@/features/landing";
+import { CTASection, DashboardPreview, Hero, WhyARK } from "@/features/landing";
 
 export default function Home() {
   return (

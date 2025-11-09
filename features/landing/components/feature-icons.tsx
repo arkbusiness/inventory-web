@@ -1,6 +1,10 @@
+import {
+  BarChartSVG,
+  ChainSVG,
+  CloudSVG,
+  PlugSVG,
+} from "@/components/ui/icons";
 import React from "react";
-import { BarChart3, Link2, Cloud, ShoppingCart } from "lucide-react";
-import { BarChartSVG, ChainSVG, CloudSVG, PlugSVG } from "@/components/ui/icons";
 
 interface FeatureIconCardProps {
   icon: React.ReactNode;
@@ -11,17 +15,14 @@ const FeatureIconCard = ({ icon, title }: FeatureIconCardProps) => {
   return (
     <div className="flex flex-col justify-center p-8 pb-[5.63rem] rounded-2xl bg-black/5">
       <h3 className="text-xl font-semibold text-black">{title}</h3>
-      <div className="text-primary mt-8">
-        {icon}
-      </div>
-
+      <div className="text-primary mt-8">{icon}</div>
     </div>
   );
 };
 
 const features = [
   {
-    icon: <BarChartSVG  />,
+    icon: <BarChartSVG />,
     title: "Real-time Tracking",
   },
   {

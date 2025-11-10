@@ -1,2 +1,4 @@
-export * from "./common";
 export * from "./app-routes";
+export * from "./common";
+export * from "./testimonials";
+export * from "./faq";

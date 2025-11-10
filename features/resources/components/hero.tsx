@@ -4,7 +4,7 @@ import { ResourceSVG } from "@/components/ui";
 export const ResourcesHero = () => {
   return (
     <section className="w-full relative bg-cta overflow-hidden">
-      <div className="absolute bottom-0 right-0 z-2">
+      <div className="absolute -bottom-20 md:bottom-0 -right-30 md:right-0 z-2 scale-50 md:scale-100">
         <ResourceSVG />
       </div>
       <Container>

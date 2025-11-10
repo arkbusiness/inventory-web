@@ -5,3 +5,4 @@ export * from "./dropdown-menu";
 export * from "./cta-section";
 export { ExpandableText } from "./expandable-text";
 export { SalesContact } from "./sales-contact";
+export { FAQSection } from "./faq-section";

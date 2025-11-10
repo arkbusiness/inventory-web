@@ -1,6 +1,6 @@
 import { CTASection } from "@/components/ui";
 import { ARK_META } from "@/constants";
-import { DemoHero, DemoVideo } from "@/features/book-demo";
+import { DemoHero, DemoVideo, DemoBookingSection } from "@/features/book-demo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +13,7 @@ export default function BookDemoPage() {
     <>
       <DemoHero />
       <DemoVideo />
+      <DemoBookingSection />
       <CTASection />
     </>
   );

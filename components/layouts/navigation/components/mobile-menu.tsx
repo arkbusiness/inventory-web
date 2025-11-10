@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { Menu } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,7 +7,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+import { APP_ROUTES } from "@/constants";
+import Link from "next/link";
 import { NavItem } from "../types";
 
 interface MobileMenuProps {
@@ -20,7 +19,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button 
+        <button
           className="lg:hidden text-black  w-8 h-8 active:scale-95 transition-all"
           aria-label="Toggle navigation menu"
           aria-expanded="false"
@@ -48,7 +47,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link
-            href="#"
+            href={APP_ROUTES.bookDemo()}
             className="w-full cursor-pointer text-primary font-medium"
           >
             Book a Demo
@@ -57,7 +56,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link
-            href="#"
+            href={APP_ROUTES.app()}
             className="w-full cursor-pointer text-primary font-medium"
           >
             Sign up

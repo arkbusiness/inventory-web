@@ -1,5 +1,6 @@
 import { SpringLeftSVG, SpringRightSVG } from "@/components/ui/icons";
 import { LinkButton } from "@/components/ui/link-button";
+import { APP_ROUTES } from "@/constants";
 
 export const CTASection = () => {
   return (
@@ -27,7 +28,7 @@ export const CTASection = () => {
         </h2>
 
         <div className="flex items-center justify-center max-w-[160px] mx-auto">
-          <LinkButton href="#" className="rounded-full h-12">
+          <LinkButton href={APP_ROUTES.app()} className="rounded-full h-12">
             Get started
           </LinkButton>
         </div>

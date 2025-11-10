@@ -1,5 +1,6 @@
 import { Container } from "@/components/layouts/container";
 import { LinkButton, RulerSVG2 } from "@/components/ui";
+import { APP_ROUTES } from "@/constants";
 
 export const PricingHero = () => {
   return (
@@ -18,7 +19,7 @@ export const PricingHero = () => {
           </h1>
 
           <div className="flex justify-center mt-10">
-            <LinkButton href="#" className="rounded-full h-12">
+            <LinkButton href={APP_ROUTES.app()} className="rounded-full h-12">
               Get Started
             </LinkButton>
           </div>

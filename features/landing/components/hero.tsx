@@ -1,27 +1,30 @@
 import { LinkButton } from "@/components/ui/link-button";
+import { APP_ROUTES } from "@/constants";
 
 export const Hero = () => {
   return (
     <section className="w-full mt-4" aria-labelledby="hero-heading">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h1 id="hero-heading" className="text-[clamp(1.5rem,6vw,4rem)] text-secondary font-semibold font-montserrat leading-[110%]">
+        <h1
+          id="hero-heading"
+          className="text-[clamp(1.5rem,6vw,4rem)] text-secondary font-semibold font-montserrat leading-[110%]"
+        >
           Smart Inventory Management Solutions for Growing Businesses
         </h1>
 
         <p className="font-normal text-xl text-center my-8 opacity-80">
-          ARK's all-in-one inventory application provides comprehensive inventory management, replacing spreadsheets with real-time visibility, seamless procurement, and fulfillment tracking.
+          ARK`s all-in-one inventory application provides comprehensive
+          inventory management, replacing spreadsheets with real-time
+          visibility, seamless procurement, and fulfillment tracking.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <LinkButton
-            href="#"
-            className="h-12.5"
-          >
+          <LinkButton href={APP_ROUTES.bookDemo()} className="h-12.5">
             Book a Demo
           </LinkButton>
           <LinkButton
-            href="#"
+            href={APP_ROUTES.app()}
             variant="outline"
             className="h-12.5"
           >

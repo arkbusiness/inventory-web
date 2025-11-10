@@ -5,8 +5,16 @@ export const footerSections: FooterSection[] = [
   {
     title: "FEATURES",
     links: [
-      { label: "Inventory Management Application", href: "#", target: "_blank" },
-      { label: "Gopher (B2B event hub)", href: "#", target: "_blank" }
+      {
+        label: "Inventory Management Application",
+        href: APP_ROUTES.app(),
+        target: "_blank",
+      },
+      {
+        label: "Gopher (B2B event hub)",
+        href: APP_ROUTES.gopher(),
+        target: "_blank",
+      },
     ],
   },
   {
@@ -14,15 +22,19 @@ export const footerSections: FooterSection[] = [
     links: [
       { label: "Solutions", href: APP_ROUTES.solutions(), target: "_self" },
       { label: "About us", href: APP_ROUTES.about(), target: "_self" },
-      { label: "Testimonials", href: "#" }
+      {
+        label: "Testimonials",
+        href: `${APP_ROUTES.solutions()}#testimonials`,
+        target: "_self",
+      },
     ],
   },
   {
     title: "SUPPORT",
     links: [
-      { label: "FAQs", href: APP_ROUTES.faq(), target: "_self" },
+      { label: "FAQs", href: `${APP_ROUTES.resources()}#faq`, target: "_self" },
       { label: "Contact Us", href: APP_ROUTES.contact(), target: "_self" },
-      { label: "Blog", href: APP_ROUTES.blog(), target: "_self" }
+      { label: "Blog", href: APP_ROUTES.blog(), target: "_self" },
     ],
   },
   {

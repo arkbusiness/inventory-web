@@ -52,7 +52,10 @@ const TestimonialCard = ({ comment, name, role, image }: Testimonial) => {
 
 export const Testimonials = ({ title = "Testimonials" }: TestimonialsProps) => {
   return (
-    <section className="w-full  bg-warm relative overflow-hidden">
+    <section
+      className="w-full  bg-warm relative overflow-hidden"
+      id="testimonials"
+    >
       <Container className="relative py-20">
         <div className="absolute left-0 top-25 z-2">
           <SpringSVG />

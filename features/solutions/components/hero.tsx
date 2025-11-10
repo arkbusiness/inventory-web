@@ -22,7 +22,7 @@ export const SolutionsHero = () => {
             <span className="relative inline-block ml-6">
               Solutions
               <span className="flex absolute right-0 -bottom-5 w-[clamp(100px,30vw,270px)]">
-                <RulerSVG />
+                <RulerSVG fill="#F5B995" />
               </span>
             </span>
           </h1>

@@ -1,6 +1,10 @@
 import { CTASection } from "@/components/ui";
 import { ARK_META } from "@/constants";
-import { ContactHero, ContactMessageSection } from "@/features/contact";
+import {
+  ContactHero,
+  ContactMessageSection,
+  ContactInfo,
+} from "@/features/contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +17,7 @@ export default function ContactPage() {
     <>
       <ContactHero />
       <ContactMessageSection />
+      <ContactInfo />
       <CTASection />
     </>
   );

@@ -1,3 +1,4 @@
+import { SalesContact } from "@/components/ui";
 import { Testimonials } from "@/components/ui/testimonials";
 import { ARK_META } from "@/constants";
 import { ResourcesHero } from "@/features/resources";
@@ -13,6 +14,7 @@ export default function ResourcesPage() {
     <>
       <ResourcesHero />
       <Testimonials />
+      <SalesContact />
     </>
   );
 }

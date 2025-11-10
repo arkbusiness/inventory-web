@@ -10,6 +10,7 @@ import Image from "next/image";
 import { Container } from "@/components/layouts/container";
 import { ExpandableText } from "../expandable-text";
 import { SpringSVG } from "../icons";
+import { testimonialsData } from "@/constants/testimonials";
 
 interface Testimonial {
   comment: string;
@@ -19,7 +20,6 @@ interface Testimonial {
 }
 
 interface TestimonialsProps {
-  testimonials: Testimonial[];
   title?: string;
 }
 
@@ -50,10 +50,7 @@ const TestimonialCard = ({ comment, name, role, image }: Testimonial) => {
   );
 };
 
-export const Testimonials = ({
-  testimonials,
-  title = "Testimonials",
-}: TestimonialsProps) => {
+export const Testimonials = ({ title = "Testimonials" }: TestimonialsProps) => {
   return (
     <section className="w-full  bg-warm relative overflow-hidden">
       <Container className="relative py-20">
@@ -91,7 +88,7 @@ export const Testimonials = ({
             }}
             className="testimonials-swiper"
           >
-            {testimonials.map((testimonial, index) => (
+            {testimonialsData.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <TestimonialCard {...testimonial} />
               </SwiperSlide>

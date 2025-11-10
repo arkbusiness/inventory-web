@@ -17,7 +17,7 @@ interface MobileMenuProps {
 
 export function MobileMenu({ items }: MobileMenuProps) {
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <button
           className="lg:hidden text-black  w-8 h-8 active:scale-95 transition-all"

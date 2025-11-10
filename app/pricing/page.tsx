@@ -1,6 +1,6 @@
 import { CTASection, SalesContact } from "@/components/ui";
 import { ARK_META } from "@/constants";
-import { PricingHero } from "@/features/pricing";
+import { PricingHero, PricingCards } from "@/features/pricing";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,6 +12,7 @@ export default function PricingPage() {
   return (
     <>
       <PricingHero />
+      <PricingCards />
       <SalesContact className="bg-white" />
       <CTASection />
     </>

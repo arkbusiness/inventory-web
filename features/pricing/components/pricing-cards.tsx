@@ -6,9 +6,10 @@ import { PRICING_PERIODS, PRICING_PLANS } from "@/constants/pricing";
 import { IntervalEnum } from "@/types";
 import { useMemo, useState } from "react";
 import { PlanCard } from "./plan-card";
+import Image from "next/image";
 
 export const PricingCards = () => {
-  const [selectedPeriod, setSelectedPeriod] = useState(IntervalEnum.MONTHLY);
+  const [selectedPeriod, setSelectedPeriod] = useState(IntervalEnum.SEMESTER);
 
   const handlePeriodChange = (period: IntervalEnum) => {
     setSelectedPeriod(period);
@@ -31,6 +32,7 @@ export const PricingCards = () => {
   };
 
   const multiplier = getIntervalMultiplier();
+  const isSemester = selectedPeriod === IntervalEnum.SEMESTER;
 
   return (
     <section className="w-full py-6 bg-highlight">
@@ -39,17 +41,29 @@ export const PricingCards = () => {
           {/* Period Selector */}
           <div className="flex justify-center items-center gap-4 mb-12">
             <Tabs value={selectedPeriod} className="w-auto">
-              <TabsList className="bg-cta h-auto py-2 px-10">
-                {PRICING_PERIODS.map((period) => (
-                  <TabsTrigger
-                    key={period.value}
-                    value={period.value}
-                    className="px-12 h-13 text-secondary data-[state=active]:font-semibold data-[state=active]:bg-white data-[state=active]:text-primary border-0! shadow-none! rounded-[12px]"
-                    onClick={() => handlePeriodChange(period.value)}
-                  >
-                    {period.label}
-                  </TabsTrigger>
-                ))}
+              {isSemester && (
+                <div className="hidden md:flex justify-center relative left-20 mb-1">
+                  <Image
+                    src="/discount.svg"
+                    alt="Discount"
+                    width={116}
+                    height={42}
+                  />
+                </div>
+              )}
+              <TabsList className="bg-cta h-auto py-2 px-1 flex-wrap">
+                {PRICING_PERIODS.map((period) => {
+                  return (
+                    <TabsTrigger
+                      key={period.value}
+                      value={period.value}
+                      className="px-12 h-13 text-secondary data-[state=active]:font-semibold data-[state=active]:bg-white data-[state=active]:text-primary border-0! shadow-none! rounded-[12px]"
+                      onClick={() => handlePeriodChange(period.value)}
+                    >
+                      {period.label}
+                    </TabsTrigger>
+                  );
+                })}
               </TabsList>
             </Tabs>
           </div>

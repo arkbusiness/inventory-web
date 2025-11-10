@@ -10,4 +10,5 @@ export const APP_ROUTES = {
   blog: () => "/blog",
   privacy: () => "/privacy",
   terms: () => "/terms",
+  app: () => "https://enterprise.storeatark.com/sign-up",
 };

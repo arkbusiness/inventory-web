@@ -27,7 +27,7 @@ export const SolutionsHero = () => {
             </span>
           </h1>
 
-          <p className="font-normal text-xl text-center my-8 opacity-80">
+          <p className="font-normal text-xl text-center my-8">
             Built to help businesses move beyond spreadsheets and legacy tools,
             ARK offers a suite of solutions tailored to every stage of inventory
             management.

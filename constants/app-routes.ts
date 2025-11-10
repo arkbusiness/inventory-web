@@ -8,6 +8,7 @@ export const APP_ROUTES = {
   resources: () => "/resources",
   faq: () => "/faq",
   blog: () => "/blog",
+  bookDemo: () => "/book-demo",
   privacy: () => "/privacy",
   terms: () => "/terms",
   app: () => "https://enterprise.storeatark.com/sign-up",

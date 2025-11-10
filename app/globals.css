@@ -24,6 +24,7 @@
   --color-neutral-foreground: var(--neutral-foreground);
   --color-highlight: var(--highlight);
   --color-cta: var(--cta);
+  --color-warm: var(--warm);
   --color-highlight-foreground: var(--highlight-foreground);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
@@ -37,7 +38,6 @@
 }
 
 :root {
-
   /* Remove Extra Font Synthesis */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -55,14 +55,15 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: #8f3600;
   --secondary-foreground: oklch(0.205 0 0);
-  --highlight: #FAEFE8;
+  --highlight: #faefe8;
   --highlight-foreground: #535862;
-  --cta: #FEF0D8;
+  --cta: #fef0d8;
+  --warm: #ede3dc;
   --neutral: #cc5500;
   --neutral-foreground: #fff;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: #F7F7F7;
+  --accent: #f7f7f7;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -80,14 +81,15 @@
   --primary-foreground: oklch(0.205 0 0);
   --secondary: #8f3600;
   --secondary-foreground: oklch(0.985 0 0);
-  --highlight: #FAEFE8;
+  --highlight: #faefe8;
   --highlight-foreground: #535862;
   --neutral: #cc5500;
   --neutral-foreground: #fff;
+  --warm: #ede3dc;
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
-  --cta: #FEF0D8;
+  --cta: #fef0d8;
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);

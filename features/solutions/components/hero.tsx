@@ -1,16 +1,19 @@
 import { Container } from "@/components/layouts/container";
-import { SolutionsSpringLeft, SolutionsSpringRight } from "@/components/ui";
+import {
+  SolutionsSpringLeftSVG,
+  SolutionsSpringRightSVG,
+} from "@/components/ui";
 import { RulerSVG } from "@/components/ui";
 
 export const SolutionsHero = () => {
   return (
     <section className="w-full relative bg-highlight overflow-hidden">
       <div className="absolute right-0 -top-3 z-2 opacity-40 lg:opacity-100">
-        <SolutionsSpringRight />
+        <SolutionsSpringRightSVG />
       </div>
 
       <div className="absolute left-0 -bottom-3 z-2">
-        <SolutionsSpringLeft />
+        <SolutionsSpringLeftSVG />
       </div>
       <Container>
         <div className="max-w-216 mx-auto px-4 text-center py-16 relative z-3">

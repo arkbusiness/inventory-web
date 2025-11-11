@@ -6,7 +6,6 @@ import {
   BlogPostContent,
   BlogPostHeader,
   BlogPostTitle,
-  RelatedPosts,
 } from "@/features/blog";
 import { ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
@@ -67,7 +66,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             <BlogPostHeader thumbnail={post.coverPhoto} title={post.title} />
 
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 lg:gap-16 mt-8">
+            <div className="grid grid-cols-1 gap-8 mt-8">
               {/* Main Content */}
               <div>
                 <BlogPostTitle
@@ -76,11 +75,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   readingTime={post.reading_time}
                 />
                 <BlogPostContent content={post.long_desc} />
-              </div>
-
-              {/* Sidebar */}
-              <div>
-                <RelatedPosts slug={slug} />
               </div>
             </div>
           </div>

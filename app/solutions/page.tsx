@@ -1,21 +1,20 @@
+import { Testimonials } from "@/components/ui/testimonials";
 import { ARK_META } from "@/constants";
 import { CTASection } from "@/features/landing";
-import { SolutionsHero, SolutionFeatures } from "@/features/solutions";
-import { Testimonials } from "@/components/ui/testimonials";
+import { SolutionFeatures, SolutionsHero } from "@/features/solutions";
 import { Metadata } from "next";
-import { testimonialsData } from "@/constants/testimonials";
 
 export const metadata: Metadata = {
   title: "Solutions | ARK",
   description: ARK_META.description,
 };
 
-export default function Solutions() {
+export default function SolutionsPage() {
   return (
     <>
       <SolutionsHero />
       <SolutionFeatures />
-      <Testimonials testimonials={testimonialsData} />
+      <Testimonials />
       <CTASection />
     </>
   );

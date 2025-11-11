@@ -6,8 +6,10 @@ export const APP_ROUTES = {
   about: () => "/about",
   contact: () => "/contact",
   resources: () => "/resources",
-  faq: () => "/faq",
   blog: () => "/blog",
-  privacy: () => "/privacy",
-  terms: () => "/terms",
+  bookDemo: () => "/book-demo",
+  privacy: () => "#",
+  terms: () => "#",
+  app: () => "https://enterprise.storeatark.com/sign-up",
+  gopher: () => "https://gopher.storeatark.com",
 };

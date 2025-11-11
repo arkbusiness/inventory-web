@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { FC } from "react";
 import ReactPaginate from "react-paginate";

@@ -8,8 +8,8 @@ export const APP_ROUTES = {
   resources: () => "/resources",
   blog: () => "/blog",
   bookDemo: () => "/book-demo",
-  privacy: () => "/privacy",
-  terms: () => "/terms",
+  privacy: () => "#",
+  terms: () => "#",
   app: () => "https://enterprise.storeatark.com/sign-up",
   gopher: () => "https://gopher.storeatark.com",
 };

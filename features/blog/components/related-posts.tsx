@@ -1,27 +1,26 @@
 "use client";
 
+import { blogData } from "@/constants";
+import shuffle from "lodash.shuffle";
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useMemo } from "react";
 
 interface RelatedPostsProps {
-  articles: {
-    id: string;
-    slug: string;
-    coverPhoto: string;
-    title: string;
-    short_desc: string;
-    reading_time: number;
-    posted_on: string;
-  }[];
+  slug: string;
 }
 
-export const RelatedPosts: FC<RelatedPostsProps> = ({ articles }) => {
+export const RelatedPosts: FC<RelatedPostsProps> = ({ slug }) => {
+  const relatedPosts = useMemo(() => {
+    const filtered = blogData.filter((item) => item.slug !== slug);
+    return shuffle(filtered).slice(0, 3);
+  }, [slug]);
+
   return (
     <div>
       <h3 className="text-2xl font-bold mb-6">Other Blog Posts</h3>
       <div className="space-y-6">
-        {articles.map((item) => (
+        {relatedPosts.map((item) => (
           <Link
             key={item.id}
             href={`/blog/${item.slug}`}

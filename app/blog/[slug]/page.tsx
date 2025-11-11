@@ -1,13 +1,14 @@
 import { Container } from "@/components/layouts/container";
 import { CTASection } from "@/components/ui";
-import { ARK_META } from "@/constants";
-import { blogData } from "@/constants";
+import { LinkButton } from "@/components/ui/link-button";
+import { APP_ROUTES, ARK_META, blogData } from "@/constants";
 import {
   BlogPostContent,
   BlogPostHeader,
   BlogPostTitle,
   RelatedPosts,
 } from "@/features/blog";
+import { ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -48,15 +49,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  const relatedPosts = blogData
-    .filter((item) => item.slug !== slug)
-    .slice(0, 3);
-
   return (
     <>
       <section className="w-full py-8">
         <Container>
           <div className="max-w-8xl mx-auto px-4">
+            {/* Back to Blog Button */}
+            <div className="mb-6 w-25">
+              <LinkButton
+                href={APP_ROUTES.blog()}
+                variant="ghost"
+                className="flex items-center gap-2"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Go Back
+              </LinkButton>
+            </div>
             <BlogPostHeader thumbnail={post.coverPhoto} title={post.title} />
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 lg:gap-16 mt-8">
@@ -72,7 +80,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
               {/* Sidebar */}
               <div>
-                <RelatedPosts articles={relatedPosts} />
+                <RelatedPosts slug={slug} />
               </div>
             </div>
           </div>

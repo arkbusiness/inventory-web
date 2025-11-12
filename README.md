@@ -1,6 +1,6 @@
 # ARK Inventory Web
 
-A modern, enterprise-grade inventory management web application built with Next.js 16, TypeScript, and Tailwind CSS. This project follows the [Bulletproof React](https://github.com/alan2207/bulletproof-react) architecture pattern for scalable and maintainable code organization.
+This project follows the [Bulletproof React](https://github.com/alan2207/bulletproof-react) architecture pattern for scalable and maintainable code organization.
 
 ## 🚀 Tech Stack
 

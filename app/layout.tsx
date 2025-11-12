@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${INTER_CLASS} antialiased`}>
-        <NextTopLoader color="var(--tertiary)" />
+        <NextTopLoader color="var(--primary)" />
         <MainHeader />
         <main
           id="main-content"

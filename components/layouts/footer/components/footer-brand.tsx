@@ -11,9 +11,9 @@ export const FooterBrand = () => {
           height={40}
         />
       </div>
-      <p className="font-medium text-white/77">
+      {/* <p className="font-medium text-white/77">
         Descriptive line about what your company does.
-      </p>
+      </p> */}
     </div>
   );
 };

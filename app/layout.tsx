@@ -6,6 +6,7 @@ import "./globals.css";
 import { MainHeader } from "@/components/layouts/navigation";
 import { Footer } from "@/components/layouts/footer";
 import { Toaster } from "react-hot-toast";
+import { ReactQueryClientProvider } from "@/providers";
 
 export const metadata: Metadata = {
   title: ARK_META.title,
@@ -21,15 +22,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${INTER_CLASS} antialiased`}>
         <NextTopLoader color="var(--primary)" />
-        <MainHeader />
-        <main
-          id="main-content"
-          className="relative max-w-[1728px] mx-auto"
-          role="main"
-        >
-          {children}
-        </main>
-        <Footer />
+        <ReactQueryClientProvider>
+          <MainHeader />
+          <main
+            id="main-content"
+            className="relative max-w-[1728px] mx-auto"
+            role="main"
+          >
+            {children}
+          </main>
+          <Footer />
+        </ReactQueryClientProvider>
         <Toaster
           toastOptions={{
             duration: 6000,

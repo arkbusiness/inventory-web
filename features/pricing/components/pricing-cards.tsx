@@ -2,22 +2,28 @@
 
 import { Container } from "@/components/layouts/container";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui";
-import { PRICING_PERIODS, PRICING_PLANS } from "@/constants/pricing";
 import { IntervalEnum } from "@/types";
-import { useMemo, useState } from "react";
-import { PlanCard } from "./plan-card";
 import Image from "next/image";
+import { useState } from "react";
+import { usePlans } from "../api";
+import { PlanCard } from "./plan-card";
+import { Spinner } from "@/components/ui/spinner";
+
+export const PRICING_PERIODS = [
+  { value: IntervalEnum.MONTHLY, label: "Monthly" },
+  { value: IntervalEnum.SEMESTER, label: "6 months" },
+  { value: IntervalEnum.ANNUAL, label: "Annual" },
+] as const;
 
 export const PricingCards = () => {
   const [selectedPeriod, setSelectedPeriod] = useState(IntervalEnum.SEMESTER);
+  const { plans, isLoadingPlans } = usePlans({
+    interval: selectedPeriod,
+  });
 
   const handlePeriodChange = (period: IntervalEnum) => {
     setSelectedPeriod(period);
   };
-
-  const plans = useMemo(() => {
-    return PRICING_PLANS[selectedPeriod];
-  }, [selectedPeriod]);
 
   const getIntervalMultiplier = () => {
     if (!selectedPeriod) return null;
@@ -67,6 +73,8 @@ export const PricingCards = () => {
               </TabsList>
             </Tabs>
           </div>
+
+          {isLoadingPlans && <Spinner />}
 
           {/* Pricing Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">

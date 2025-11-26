@@ -6,3 +6,5 @@ export const ARK_META = {
 
 export const CURRENCY = "NGN";
 export const CURRENCY_SYMBOL = "₦";
+
+export const EMPTY_ARRAY = [];
